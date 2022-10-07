@@ -1,0 +1,255 @@
+// Proper css writing #ba6c01
+// DRY. DRY stands for "Don't Repeat Yourself". ... 
+// Naming. Naming CSS selectors is another important point for writing better CSS. ... 
+// Don't Use Inline-Styles. ... 
+// Avoid the ! ... 
+// Use a Preprocessor. ... 
+// Use Shorthands. ...
+// Add Comments When Necessary. 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+// color palette
+$black : #000000;
+$black-lighten-1 : #252B42;
+$primary : #EC1B24;
+$secondary : #FFA62B;
+$blue : #B9DBE6;
+$gray : #737373;
+$gray-lighten-1 : #D9D9D9;
+$white : #FFFFFF;
+
+html {
+    // scroll-snap-type: proximity;
+    scroll-snap-points-y: repeat(100vh);
+    // scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+
+}
+
+section {
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 800;
+}
+
+.mt-n20vh {
+    margin-top: -20vh;
+}
+
+.mt-n10vh {
+    margin-top: -10vh;
+}
+
+.bg-row {
+    background-image: url(/Images/menara-up.png);
+    background-position-y: -285px;
+    background-size: cover;
+    margin-top: -65px;
+    background-repeat: no-repeat;
+    height: 90vh;
+    transition-delay: 00ms;
+    transition-duration: 500ms;
+}
+
+.bg-dark {
+    background: rgb(37, 43, 66);
+    background: linear-gradient(90deg, rgba(37, 43, 66, 1) 0%, rgba(62, 68, 92, 1) 100%);
+}
+
+.bg-dark-90 {
+    background-color: $black-lighten-1 !important;
+    opacity: 90%;
+
+}
+
+.text-secondary {
+    color: $secondary !important;
+}
+
+.text-white-75 {
+    color: rgba(255, 255, 255, .75) !important;
+}
+
+.text-blue {
+    color: $blue;
+}
+
+.opacity-90 {
+    opacity: 95%;
+}
+
+.navbar-dark {
+
+    .nav-item {
+        margin-left: 2rem;
+        font-size: 28px;
+        text-align: center;
+        // transition-duration: 200ms;
+
+        &:hover {
+            font-size: 16px;
+
+            span {
+                display: block;
+                font-size: 12px;
+            }
+
+            i {
+                color: $primary;
+
+            }
+        }
+
+        span {
+            display: none;
+        }
+
+
+        .nav-link {
+            color: $white;
+        }
+    }
+}
+
+.hover-show-more {
+    transition-duration: 200ms;
+    background-color: $white;
+
+    a {
+        color: $black-lighten-1;
+    }
+
+    .show-hover {
+        display: none;
+    }
+
+    &:hover {
+        background-color: $primary;
+        color: $white;
+
+        .show-hover {
+            display: block;
+        }
+
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}
+
+.ms-6 {
+    margin-left: 3.5rem;
+}
+
+.bod-card {
+    min-height: 450px;
+
+    &:first-child {
+        min-height: auto !important;
+    }
+
+    .bod-img {
+        height: 250px;
+    }
+
+    a {
+        display: none;
+    }
+
+    &:hover {
+        background: $white;
+        color: $black;
+
+        .text-white-75 {
+            color: $black !important;
+            opacity: 75%;
+        }
+
+        a {
+            display: block;
+            color: $primary;
+            text-decoration: none;
+        }
+    }
+}
+
+.ksm-card {
+    height: 450px;
+
+    a {
+        display: none;
+    }
+
+    &:hover {
+        background-color: $primary;
+        color: $white;
+
+        .text-muted {
+            color: $white !important;
+            opacity: 75%;
+        }
+
+        a {
+            display: block;
+            color: $white;
+            text-decoration: none;
+        }
+    }
+
+}
+
+.section-nav {
+    .nav-item {
+        width: 250px;
+
+        .nav-link {
+            border: none;
+            width: 100%;
+            height: 100%;
+
+            &.active {
+                .text-blue {
+                    color: $primary !important;
+                }
+
+                .text-white {
+                    color: $black !important;
+                }
+
+                &:hover {
+                    background-color: $white;
+                }
+            }
+
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, .1);
+        }
+    }
+}
+
+.border-bottom-primary {
+    text-decoration: underline;
+    text-decoration-color: $primary;
+    text-underline-offset: 11px;
+}
